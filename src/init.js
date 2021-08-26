@@ -6,7 +6,7 @@ import "./models/User";
 import "./models/Comment";
 import app from "./server";
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000; // heroku가 주는 PORT있으면 그걸로, 없으면 내 컴퓨터 PORT로
 
 const handleListening = () => 
     console.log(`Server listening on port http://localhost${PORT}`); // handler 정의
