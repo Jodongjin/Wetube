@@ -63,8 +63,8 @@ export const postUpload = async(req, res) => {
         const newVideo = await Video.create({ // db에 넣어줄 document 생성(schema와 같은 모양) / schema: 데이터 form, document: 실제 데이터
             title, // === title: title,
             description,
-            fileUrl: video[0].path, // req.files의 video 배열 중 첫 요소(첫 파일)의 path 속성(file URL) 저장
-            thumbUrl: thumb[0].path,
+            fileUrl: video[0].location, // req.files의 video 배열 중 첫 요소(첫 파일)의 path 속성(file URL) 저장
+            thumbUrl: thumb[0].location,
             owner: _id, // user의 _id property를 video의 owner로
             hashtags: Video.formatHashtags(hashtags),
         }); // 이 object는 생성과 동시에 db에 업로드 -> await 필요
