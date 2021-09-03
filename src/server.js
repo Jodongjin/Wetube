@@ -34,6 +34,11 @@ app.use((req, res, netx) => { // ffmpeg 관련 error
     res.header("Cross-Origin-Opener-Policy", "same-origin");
     netx();
 });
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // static files serving (브라우저에 서버 폴더 노출)
 app.use("/uploads", express.static("uploads"));
