@@ -1,6 +1,6 @@
 # Wetube
 
-## 노마드코더의 유튜브 클론 코딩입니다.
+Wetube Clone built using NodeJS, Express, Mongo and ES6
 
 ### URL
 / -> Home
