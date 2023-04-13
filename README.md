@@ -1,5 +1,8 @@
-# Wetube Reloaded
+# Wetube
 
+##노마드코더의 유튜브 클론 코딩입니다.
+
+###URL
 / -> Home
 /join -> Join
 /login -> Login
